@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFFFFF;
+
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    --fonte-primary: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: var(--fonte-primary);
+}
+
+body {
+    background-color: var(--background-primary);
+    font-size: 14px;
+    color: var(--content-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+#inputArea {
+    width: 627px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#item-input {
+    width: 450px;
+    border: var(--border-primary) solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#item-input:hover {
+    border-color: var(--border-hover);
+}
+
+#item-input:focus {
+    border-color: var(--color-brand);
+}
+
+#add-button {
+    background-color: var(--color-brand);
+    font-size: medium;
+    font-weight: 500;
+    color: var(--always-white);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+#add-button:hover {
+    background-color: var(--color-brand-hover);
+}
+
+.item {
+    display: flex;
+    background-color: var(--always-white);
+    border-radius: 10px;
+    width: 600px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 5px; /* Define o raio das bordas */
+    border: 2px solid var(--border-primary); /* Ajusta a espessura e cor da borda */
+    appearance: none; /* Remove o estilo padrão */
+    -webkit-appearance: none; /* Compatibilidade com navegadores WebKit */
+    cursor: pointer;
+}
+
+.checkbox:hover {
+    border: 2px solid var(--border-hover);
+}
+
+.checkbox:checked::after {
+    content: "\2713";
+    color: var(--always-white);
+    background-color: var(--color-brand);
+    border-radius: 3px;
+    font-size: 9.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemText {
+    font-size: 16px;
+    flex: 1;
+    margin-left: 10px;
+}
+
+button {
+    justify-items: flex-end;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+i {
+    color: var(--content-tertiary);
+}
