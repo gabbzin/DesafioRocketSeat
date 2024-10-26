@@ -44,7 +44,7 @@ header {
 }
 
 header > img {
-    height: 50px;
+    height: 65px;
     object-fit: contain;
 }
 
