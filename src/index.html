@@ -21,7 +21,7 @@
 
         <div id="inputArea">
             <input type="text" id="item-input" placeholder="Adicione um novo item">
-            <button id="add-button">Adicionar item</button>
+            <button id="add-button" onclick="addItem()">Adicionar item</button>
         </div>
 
         <form action="main.js" method="get">
@@ -46,8 +46,12 @@
                 </li>
             </ul>
         </form>
-    </body>
-        
+
+        <div id="AvisoItemExcluido">
+            <i class='bx bxs-error-circle'></i>
+                <div class="itemText">O item foi removido da lista</div>
+            <button style="color: white;"><i class='bx bx-x'></i></button>
+        </div>
     </main>
 </body>
 </html>
