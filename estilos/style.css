@@ -66,8 +66,13 @@ h1 {
     width: 627px;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     margin-bottom: 40px;
+    gap: 20px;
+}
+
+#inputArea label {
+    display: flex;
+    flex: 1;
 }
 
 #item-input {
