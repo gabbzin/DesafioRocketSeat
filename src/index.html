@@ -20,11 +20,13 @@
         <h1>Compras da semana</h1>
 
         <div id="inputArea">
-            <input type="text" id="item-input" placeholder="Adicione um novo item">
-            <button id="add-button" onclick="addItem()">Adicionar item</button>
+            <form action="main.js" method="post">
+                <input type="text" id="item-input" placeholder="Adicione um novo item">
+                <button id="add-button" onclick="addItem()">Adicionar item</button>
+            </form>
         </div>
 
-        <form action="main.js" method="get">
+        <form action="main.js" method="post">
             <ul id="item-list">
                 <li class="item">
                     <input type="checkbox" class="checkbox">
