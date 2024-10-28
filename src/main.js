@@ -1,5 +1,3 @@
-let addButton = window.document.getElementById("add-button");
-
 function adicionarItem() {
     let itemList = window.document.getElementById("item-list");
     let item = document.getElementById("item-input").value;
@@ -10,6 +8,7 @@ function adicionarItem() {
         
         let itemElement = window.document.createElement("li"); // Criando o elemento li
         itemElement.classList.add("item"); // Adicionando a classe item no elemento
+        itemElement.id = "item";
 
         let checkbox = window.document.createElement("input");
         checkbox.type = "checkbox";
@@ -26,6 +25,8 @@ function adicionarItem() {
         let iconLixo = window.document.createElement("i");
         iconLixo.classList.add("bx");
         iconLixo.classList.add("bx-trash");
+        iconLixo.setAttribute("onclick","deletarItem()");
+        iconLixo.id = "BotaoRemove";
         botao.appendChild(iconLixo);
 
         itemElement.appendChild(botao);
@@ -38,7 +39,20 @@ function adicionarItem() {
 }
 
 function deletarItem(){
-    let item = document.querySelectorAll(".item");
+    let item = document.getElementById("item");
+    let aviso = document.getElementById("AvisoItemExcluido");
 
-    
+    item.remove();
+
+    aviso.classList.add("visible");
+
+    setTimeout(() => {
+        aviso.classList.remove("visible");
+    }, 3000);
+}
+
+function ocultarAviso(){
+    let aviso = document.getElementById("AvisoItemExcluido");
+
+    aviso.classList.remove("visible");
 }
